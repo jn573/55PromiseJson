@@ -23,7 +23,8 @@ function getPosts() {
     posts.forEach(function (post) {
         output += `<li>${post.environment}: ${post.conn}</li>`
     })
-    document.body.innerHTML = output
+    document.querySelector('.env').innerHTML = output
+    // document.body.innerHTML = output
 }
 
 createPost({environment:'SIT', conn: 'sit.connection/string'})
